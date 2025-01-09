@@ -1,11 +1,16 @@
 #! /usr/bin/env python3
-#Import required packages and modules.
+#Load required packages and modules.
+import os
+import anndata
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import scanpy as sc
-import anndata as ad
-import matplotlib.pyplot as plt
-import os
-import numpy as np
+import scvi
+import seaborn as sns
+import torch
+import random
+from scvi.model.utils import mde
 
 #Define variables and settings.
 directory_path = '/wynton/home/pollenlab/reedmcmullen/projects/NEMP17/refmap_NEMP17'
