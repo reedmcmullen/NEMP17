@@ -44,6 +44,7 @@ adata = adata[adata.obs.pct_counts_ribo < ribo_cutoff, :]
 
 #Preprocess the dataset.
 print('Preprocessing the dataset...')
+adata.layers['counts'] = adata.X.copy()
 sc.pp.normalize_total(adata)
 sc.pp.log1p(adata)
 sc.pp.highly_variable_genes(adata, n_top_genes=2000, batch_key="GEMwell", flavor='seurat')
