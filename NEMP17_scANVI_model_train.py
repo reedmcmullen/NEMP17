@@ -38,7 +38,7 @@ scanvi_model = scvi.model.SCANVI.from_scvi_model(scvi_model, adata=adata_concat,
 
 #Training scANVI model.
 print('Training scANVI model...')
-scanvi_model.train(max_epochs=20, n_samples_per_label=100)
+scanvi_model.train(max_epochs=200, n_samples_per_label=100)
 
 #Save scANVI model.
 print('Saving scANVI model...')
