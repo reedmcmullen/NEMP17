@@ -21,8 +21,8 @@ adata = sc.read_h5ad(anndata_initial)
 print('Filtering the dataset...')
 n_genes_cutoff = 9000
 total_counts_cutoff = 30000
-mito_cutoff = 20
-ribo_cutoff = 10
+mito_cutoff = 10
+ribo_cutoff = 5
 
 #Plot violin plots of QC metrics with cutoffs.
 fig, axes = plt.subplots(1, 4, figsize=(16, 6))
