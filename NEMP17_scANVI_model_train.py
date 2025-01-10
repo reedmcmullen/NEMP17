@@ -44,5 +44,10 @@ scanvi_model.train(max_epochs=20, n_samples_per_label=100)
 print('Saving scANVI model...')
 scanvi_model.save(directory_path + '/concat_scanvi_model/', overwrite=True)
 
+#Save dataset.
+#Save dataset.
+concat_preprocessed = directory_path + '/ref_query_concat_preprocessed.h5ad'
+adata_concat.write(concat_preprocessed, compression='gzip')
+
 
 
